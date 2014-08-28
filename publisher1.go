@@ -202,7 +202,7 @@ func connect(config *NetworkConfig) (socket *tls.Conn) {
       continue
     }
 
-    tlsconfig.ServerName = host
+    //tlsconfig.ServerName = host
 
     socket = tls.Client(tcpsocket, &tlsconfig)
     socket.SetDeadline(time.Now().Add(config.timeout))
